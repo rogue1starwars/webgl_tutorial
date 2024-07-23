@@ -7,12 +7,16 @@ let orientation = {
   beta: 0,
   gamma: 0,
 };
-window.addEventListener("deviceorientation", (event) => {
-  orientation.alpha = (event.alpha * Math.PI) / 180;
-  orientation.beta = (event.beta * Math.PI) / 180;
-  orientation.gamma = (event.gamma * Math.PI) / 180;
-  console.log(orientation);
-}, true);
+window.addEventListener(
+  "deviceorientationabsolute",
+  (event) => {
+    orientation.alpha = (event.alpha * Math.PI) / 180;
+    orientation.beta = (event.beta * Math.PI) / 180;
+    orientation.gamma = (event.gamma * Math.PI) / 180;
+    console.log(orientation);
+  },
+  true
+);
 
 main();
 //
