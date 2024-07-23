@@ -41,19 +41,19 @@ function drawScene(gl, programInfo, buffers, orientation) {
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
     orientation.beta, // amount to rotate in radians
-    [1, 0, 0]
+    [-1, 0, 0]
   ); // axis to rotate around (X)
   mat4.rotate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
-    orientation.alpha, // amount to rotate in radians
-    [0, 1, 0]
+    orientation.gamma, // amount to rotate in radians
+    [0, -1, 0]
   ); // axis to rotate around (Y)
   mat4.rotate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
-    orientation.gamma, // amount to rotate in radians
-    [0, 0, 1]
+    orientation.alpha, // amount to rotate in radians
+    [0, 0, -1]
   ); // axis to rotate around (Z)
 
   // Tell WebGL how to pull out the positions from the position
