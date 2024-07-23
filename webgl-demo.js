@@ -8,9 +8,9 @@ let orientation = {
   gamma: 0,
 };
 window.addEventListener("deviceorientation", (event) => {
-  orientation.alpha = (event.alpha * PI) / 180;
-  orientation.beta = (event.beta * PI) / 180;
-  orientation.gamma = (event.gamma * PI) / 180;
+  orientation.alpha = (event.alpha * Math.PI) / 180;
+  orientation.beta = (event.beta * Math.PI) / 180;
+  orientation.gamma = (event.gamma * Math.PI) / 180;
   console.log(orientation);
 }, true);
 
@@ -99,7 +99,6 @@ function main() {
     then = now;
 
     drawScene(gl, programInfo, buffers, orientation);
-    cubeRotation += deltaTime;
 
     requestAnimationFrame(render);
   }
