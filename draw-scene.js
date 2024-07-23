@@ -40,13 +40,13 @@ function drawScene(gl, programInfo, buffers, orientation) {
   mat4.rotate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
-    orientation.alpha, // amount to rotate in radians
+    orientation.beta, // amount to rotate in radians
     [1, 0, 0]
   ); // axis to rotate around (X)
   mat4.rotate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
-    orientation.beta, // amount to rotate in radians
+    orientation.alpha, // amount to rotate in radians
     [0, 1, 0]
   ); // axis to rotate around (Y)
   mat4.rotate(
