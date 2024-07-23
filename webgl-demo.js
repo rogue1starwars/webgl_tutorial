@@ -12,7 +12,7 @@ window.addEventListener("deviceorientation", (event) => {
   orientation.beta = (event.beta * PI) / 180;
   orientation.gamma = (event.gamma * PI) / 180;
   console.log(orientation);
-});
+}, true);
 
 main();
 //
